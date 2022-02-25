@@ -21,7 +21,7 @@ This makes Roblox Http requests more complete by adding support for the followin
 - Create a heroku account here: https://signup.heroku.com. Make sure to verify your email and set a password. If you already have a heroku account, log into it.
 - Click this button
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sentanos/ProxyService)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/vRx77b/ProxyService)
 
 - Type in whatever name you want.
 - Click "Deploy app". Don't touch any of the variables unless you know what you're doing.
@@ -34,7 +34,7 @@ That's it.
 
 **Client Setup Tutorial**
 
-- Get the handler script from [here](https://github.com/sentanos/ProxyService/blob/master/client/ProxyService.mod.lua) and put it in a module script in ServerScriptService.
+- Get the handler script from [here](https://github.com/vRx77b/ProxyService/blob/master/client/ProxyService.mod.lua) and put it in a module script in ServerScriptService.
 - In the script you want to use this from, require the ModuleScript. If your module is named "ProxyService", for example, you would add `local ProxyService = require(game:GetService('ServerScriptService').ProxyService)` to the top of your script.
 - Add a line to create your proxy client, this will generally look like this: `local Proxy = ProxyService:New('PASTE_DOMAIN_HERE', 'PASTE_ACCESS_KEY_HERE')` (see below for a more complete example)
 - Use Proxy exactly as you would use [HttpService](http://wiki.roblox.com/index.php?title=API:Class/HttpService). The only difference is an extra `overrideProto` argument. You can pass in `http` if you are using an API that doesn't support https (the default protocol).
